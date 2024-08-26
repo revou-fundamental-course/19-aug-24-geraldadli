@@ -4,17 +4,18 @@
     align-items: center;
     justify-content: space-between;
 }
-.logo-icon{
-    height: 48px;
-    width: 48px;
-    border: 1px;
-    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMhXFl5-tv99gsb1u3GOskR18VZDRiWKHciw&s);
+.logo-icon {
+    height: 96px;
+    width: 96px;
+    border: 1px solid black;
+    background-image: url(https://media.licdn.com/dms/image/v2/D4E03AQFIMSAfvAp5bw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1723539985018?e=1729728000&v=beta&t=xcQNkhc-0yodYoaifzmqIUK0Bs8bZPYU8vsXzoW-3rw);
     background-size: cover;
     border-radius: 50%;
 }
 
 .nav-container{
     display: flex;
+    justify-content: flex-end;
 }
 
 .nav-item{
@@ -25,27 +26,109 @@
     font-weight: bold;
     padding: 8px;
     border-radius: 8px;
+    font-family: 'Whitney SSm A', 'Whitney SSm B', Verdana, sans-serif
+}
+
+.title{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.animated-text{
+    font-size: x-large;
+    font-family: fangsong;
+    min-width: 280px;
+}
+
+.animated-text span{
+    position: relative;
+}
+
+.animated-text span::before{
+    content: "Coding";
+    color: orange;
+    animation: words 20s infinite;
+}
+
+.animated-text span::after{
+    content: "";
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    background-color: #2f3542;
+    border-left: 2px solid #ff7f50;
+    right: -8px;
+    animation: cursor .8s infinite, typing 20s steps(14) infinite;
+}
+
+@keyframes words {
+    0%,20%{
+        content: "Coding";
+    }
+    21%,40%{
+        content: "Swimming";
+    }
+    41%,60%{
+        content: "Running";
+    }
+    61%,80%{
+        content: "Gaming";
+    }
+    81%,100%{
+        content: "Reading";
+    }
+}
+
+@keyframes cursor {
+    to{
+        border-left: 2px solid #ff7f5000;
+    }
+}
+
+@keyframes typing {
+    10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+        width: 0;
+    }
+    5%,20%,25%,40%,45%,60%,65%,80%,85%{
+        width: calc(100% + 8px);
+    }
 }
 
 .banner-img{
     height:300px;
     width: auto;
-    background-image: url(https://picsum.photos/300);
+    background-image: url(https://media.licdn.com/dms/image/v2/D5616AQFvjC6EP01JHw/profile-displaybackgroundimage-shrink_350_1400/profile-displaybackgroundimage-shrink_350_1400/0/1687750419529?e=1729728000&v=beta&t=8QsdVqQujFghoeOE_4uoLXPoPletyzU7LijkmkKlwhw);
     background-size: cover;
     background-position: center;
 }
 
-.profile-item{
+.skill-item{
     height:100px;
     text-align: -webkit-center;
+    text-decoration: none;
 }
 
-.profile-container{
+.skill-container{
     display: flex;
     justify-content: space-around;
 }
 
-.profile-python{
+.skill{
+    background-color: oldlace;
+    border: double;
+    padding: 50px 50px 25px 50px;
+}
+
+.skill-title{
+    display: flex;
+    justify-content: space-around;
+    font-size: xx-large;
+    margin-top: -30px;
+    margin-right: 30px;
+}
+
+.skill-python{
     height : 50px;
     background-image:url(https://qph.cf2.quoracdn.net/main-qimg-28cadbd02699c25a88e5c78d73c7babc);
     background-size: cover;
@@ -54,7 +137,7 @@
     width: 50px;
 }
 
-.profile-css{
+.skill-css{
     height : 50px;
     background-image:url(https://cdn.worldvectorlogo.com/logos/css-3.svg);
     background-size: cover;
@@ -63,7 +146,7 @@
     width: 50px;
 }
 
-.profile-js{
+.skill-js{
     height : 50px;
     background-image:url(https://i.pinimg.com/originals/13/40/7c/13407c12f50f08d328800c3caef43f61.png);
     background-size: cover;
@@ -72,6 +155,59 @@
     width: 50px;
 }
 
+.skill-html{
+    height : 50px;
+    background-image:url(https://e7.pngegg.com/pngimages/410/100/png-clipart-web-development-html-responsive-web-design-logo-javascript-html-angle-web-design-thumbnail.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 10%;
+    width: 50px;
+}
+
+.fonttag{
+    font-size: small
+}
+
+.profile-container{
+    display: flex;
+    justify-content: space-around;
+    display: table-row-group;
+    display: inline-flex;
+}
+
+.profile-item{
+    height:100px;
+    text-align: -webkit-center;
+    text-decoration: none;
+    margin-right: 50px;
+}
+
+.profile-instagram{
+    height : 50px;
+    background-image:url(https://jessicahische.is/assets/images/glyph-logo_May2016.png);
+    background-size: cover;
+    background-position: center;
+    width: 50px;
+}
+
+.profile-linkedin{
+    height : 50px;
+    background-image:url(https://images.rawpixel.com/image_png_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjk4Mi1kMS0xMC5wbmc.png);
+    background-size: cover;
+    background-position: center;
+    width: 50px;
+}
+
+.profile-x{
+    height : 50px;
+    background-image:url(https://img.freepik.com/free-vector/new-2023-twitter-logo-x-icon-design_1017-45418.jpg?size=338&ext=jpg&ga=GA1.1.2008272138.1724371200&semt=ais_hybrid);
+    background-size: cover;
+    background-position: center;
+    width: 50px;
+}
+
+
+
 .message-us-form {
     display: flex;
 }
@@ -79,7 +215,7 @@
 .input-form,
 .result-form {
     flex: 1;
-    
+    padding-bottom: 16px;
 }
 
 .input-form>div {
@@ -96,10 +232,12 @@ input {
     line-height: 1.5;
     resize: none;
 }
+
 .form-group {
     display: flex;
     align-items: flex-start;
 }
+
 .essay-box {
     margin-top: 5px;
     width: 50%;
@@ -112,9 +250,9 @@ input {
     resize: none;
 }
 
-.button{
+.submit{
     border: none;
-    width: 55%;
+    width: 58%;
     height: 50px;
     font-family: monospace;
     font-weight: bold;
@@ -122,12 +260,24 @@ input {
     color: white;
     font-size: xx-large;
 }
-
-@media only screen and (max-width: 480px) {
-
-    .container,
-    .headquarters {
-        flex-direction: column;
-        align-items: center;
-    }
+.result-form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
+
+.result-form > b {
+    display: block;
+    font-weight: bold;
+}
+
+.result-form > span {
+    display: block;
+    margin-bottom: 5px;
+}
+
+

@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css\styles.css">
+    <script src="js/script.js" defer></script> 
+
 </head>
 
 <body>
@@ -15,9 +17,9 @@
 
         <section class="nav-container">
             <a href="#"class='nav-item'>Home</a>
-            <a href="#our-profile"class='nav-item'>Our Profile</a>
-            <a href="#"class='nav-item'>Achievement</a>
-            <a href="#"class='nav-item'>Message Us</a>
+            <a href="#skill"class='nav-item'>Skill</a>
+            <a href="#"class='nav-item'>My Profile</a>
+            <a href="#"class='nav-item'>Contact Us</a>
         </section>
     </nav>
 
@@ -26,10 +28,10 @@
     <main>
         <article>
             <header>
-                <h1>Feel free to check my website</h1>
+                <h1 class="title">Feel free to visit my website</h1>
             </header>
 
-            <p>Hello! My name is Gerald. I am a Computer Science major with a passion for coding, gaming, swimming, and running. I enjoy watching documentaries in my free time to learn more about the world.</p>
+            <p class="animated-text">Hello! My name is Gerald. I am a Computer Science major with a passion for <span></span>. I enjoy watching documentaries in my free time to learn more about the world.</p>
 
             <div class=banner-img></div>
 
@@ -37,49 +39,79 @@
 
         <hr />
 
+        <section class="skill">
+            <header>
+                <h1 class="skill-title">Skill</h1>
+            </header>
+
+            <section class="skill-container">
+                <div class="skill-item">
+                    <div class ="skill-python"></div>
+
+                    <h2>Python</h2>
+                </div>
+                <div class="skill-item">
+                    <div class ="skill-css"></div>
+
+                    <h2>CSS</h2>
+                </div>
+                <div class="skill-item">
+                    <div class ="skill-html"></div>
+
+                    <h2>HTML</h2>
+                </div>
+                <div class="skill-item">
+                    <div class ="skill-js"></div>
+
+                    <h2>Javascript</h2>
+                </div>
+                
+            </section>
+        </section>
+
         <section>
             <header>
                 <h1>My Profile</h1>
             </header>
 
             <section class="profile-container">
-                <div class="profile-item">
-                    <div class ="profile-python"></div>
+                <a class="profile-item" href="https://instagram.com/geraldadli/" target="_blank">
+                    <div class ="profile-instagram"></div>
 
-                    <h2>Python</h2>
-                </div>
-                <div class="profile-item">
-                    <div class ="profile-css"></div>
+                    <h2 class="fonttag">@geraldadli</h2>
+                </a>
+                <a class="profile-item" href="https://linkedin.com/in/gerald-adli" target="_blank">
+                    <div class ="profile-linkedin"></div>
 
-                    <h2>CSS</h2>
-                </div>
-                <div class="profile-item">
-                    <div class ="profile-js"></div>
+                    <h2 class="fonttag">Gerald Adli</h2>
+                </a>
+                <a class="profile-item" href="https://x.com/geraldadli?t=t2RyMpH-uHZDdCe_wFLetA&s=08" target="_blank">
+                    <div class ="profile-x"></div>
 
-                    <h2>Javascript</h2>
-                </div>
+                    <h2 class="fonttag">@geraldadli</h2>
+                </a>
             </section>
         </section>
 
         <section>
             <h1>Contact Us</h1>
-            <form class="message-us-from" name="message-us-form">
+            <form class="message-us-from" name="message-us-form" onsubmit="return validateForm()">
                 <div class="input-form">
-                    <div>
-                        <label>Name:</label><input type="text" name="name"
-                    </div>
-                    <div>
-                        <label>Email:</label><input type="text" name="email">
-                    </div>
-                    <div>
-                        <label>Phone Number</label><input type="text" name="phone_number"
-                    </div>
-                    <div class="form-group">
-                        <label for="essay">Message:</label>
-                        <textarea id="essay" class="essay-box" placeholder="Tulis komentar kamu..."></textarea>
-                    </div>
-                    <button type="submit" class="button">Submit</button>                    
+                    <label>Name:</label><input id="name" type="text" name="name" placeholder="Enter your name">
                 </div>
+                <div class="input-form">
+                    <label>Email:</label><input type="text" name="email" placeholder="Enter your email">
+                </div>
+                <div class="input-form">
+                    <label>Phone Number :</label><input type="text" name="phone_number" placeholder="Enter your phone number">
+                </div>
+                <div class="form-group">
+                    <label for="essay">Message:</label>
+                    <textarea id="essay" class="essay-box" placeholder="Write your essay..."></textarea>
+                </div>
+                <button type="submit" class="submit">Submit</button>  
+                <p class="error-form" id="error-form"></p>                  
+
                 <div class="result-form">
                     <b>Current Time :</b>
                     <span id="current-time"></span><br>
@@ -95,7 +127,6 @@
     </main>
     <footer>
         <p>Made by Gerald</p>
-    </footer>
-</body>
+    </footer></body>
 
 </html>
