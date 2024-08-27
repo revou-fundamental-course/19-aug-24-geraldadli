@@ -97,8 +97,7 @@
 
 .banner-img{
     height:300px;
-    width: auto;
-    background-image: url(https://media.licdn.com/dms/image/v2/D5616AQFvjC6EP01JHw/profile-displaybackgroundimage-shrink_350_1400/profile-displaybackgroundimage-shrink_350_1400/0/1687750419529?e=1729728000&v=beta&t=8QsdVqQujFghoeOE_4uoLXPoPletyzU7LijkmkKlwhw);
+    width: 100%;
     background-size: cover;
     background-position: center;
 }
@@ -280,4 +279,13 @@ input {
     margin-bottom: 5px;
 }
 
+@media only screen and (max-width: 600px){
+    .nav-container{
+        flex-direction: column;
+        width: 100%;
+    }
 
+    .logo-icon{
+        margin-bottom: 14px;
+    }
+}

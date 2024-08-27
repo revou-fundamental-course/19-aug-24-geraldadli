@@ -37,3 +37,4 @@ function setName(name){
     document.getElementById("name").innerHTML = name;
     document.getElementById('error-form').innerHTML = ""
 }
+
