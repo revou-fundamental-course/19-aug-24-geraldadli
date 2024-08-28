@@ -10,7 +10,7 @@ function validateForm() {
         document.getElementById("error-form").innerHTML = "Name cannot be empty!";
         isValid = false;
     } else {
-        document.getElementById("error-form").innerHTML = "";
+        document.getElementById("error-form").innerHTML = name;
     }
 
     if (email == '') {
